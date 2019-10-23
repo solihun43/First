@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title>Test Load</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		 <link href="https://live-chat-43ac6.firebaseapp.com/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		  
+		  <link href="https://live-chat-43ac6.firebaseapp.com/css/chat-appv1.css" rel="stylesheet" type="text/css">
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/avayaGlobal.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/links.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/webChatConfig.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/webChatLogon.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/webChatSocket.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/webChatUI.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/estimatedWaitTime.js"></script>
+		  <script src="https://live-chat-43ac6.firebaseapp.com/js/webChat.js"></script>
+
+		  
+</head>
+<body>
+
+	<script>
+		function loadScript(url, callback)
+		{
+			var body = document.body;
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = url;
+			script.async = false;
+			script.onreadystatechange = callback;
+			script.onload = callback;
+
+			body.appendChild(script);
+		}
+
+		var setup = function(){
+			setTimeout(webChat.setupWebChat, 200);
+		}
+
+		loadScript('https://live-chat-43ac6.firebaseapp.com/js/loadContent-0926.js', setup);
+	</script>
+	
+</body>
+</html>
